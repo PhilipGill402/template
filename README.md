@@ -56,7 +56,7 @@ export PATH="$HOME/.local/bin:$PATH"
 ## Usage
 
 ```bash
-template [-g] c|cpp <project_name>
+template c|cpp <project_name> [-g]
 ```
 
 ### Arguments
@@ -78,7 +78,7 @@ template c hello_world
 
 Create a C++ project with Git initialized:
 ```bash
-template -g cpp raytracer
+template cpp raytracer -g
 ```
 
 ---
@@ -109,16 +109,6 @@ Tested on macOS and Linux.
 ## Motivation
 
 This project exists to remove friction when starting small C/C++ projects, especially for coursework, experiments, or quick prototypes. Instead of rewriting Makefiles and folder structures, you can start coding immediately.
-
----
-
-## Future Improvements
-
-- Support for additional flags (debug/release)
-- Custom compiler flags
-- Language templates beyond C/C++
-- Unit test scaffolding
-- Editor config generation
 
 ---
 
