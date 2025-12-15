@@ -2,7 +2,7 @@
 
 lang=$1
 name=$2
-init_git=$false
+init_git=false
 
 #makes sure that all arguments are passed
 if [[ -z "$lang" || -z "$name" ]]; then
@@ -12,7 +12,7 @@ fi
 
 while getopts ":cCp:p:" opt; do
     case "$opt" in
-        -g) init_git=$true ;;
+        g) init_git=true ;;
     esac
 done
 
@@ -84,7 +84,7 @@ if [ "$lang" = "c" ]; then
     mkdir "$name"
     
     #checks if git flag is set
-    if [ $init_git = $true ]; then
+    if [ $init_git ]; then
         git init "$name"
     fi
 
@@ -103,7 +103,7 @@ elif [ "$lang" = "cpp" ]; then
     mkdir "$name"
     
     #checks if git flag is set
-    if [ $init_git = $true ]; then
+    if [ $init_git ]; then
         git init "$name"
     fi
 
