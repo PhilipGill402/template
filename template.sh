@@ -6,7 +6,7 @@ init_git=false
 
 #makes sure that all arguments are passed
 if [[ -z "$lang" || -z "$name" ]]; then
-    echo "usage: $0 c|cpp <project_name>"
+    echo "usage: template c|cpp <project_name>"
     exit 1
 fi
 
